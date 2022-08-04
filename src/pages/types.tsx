@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+
 import { Types,Footer, Nav } from '../components'
 
 function types() {

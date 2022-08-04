@@ -33,7 +33,7 @@ export function Profile() {
   });
 
     return (
-        <div className="container px-8 py-16 mx-auto sm:px-32 ">
+      <div className="px-8 py-16 mx-auto sm:px-32 bg font text-[#EC6F35] min-h-screen ">
         <h1 className="mb-4 text-3xl font-bold text-center uppercase">My NFTs</h1>
 
 <div className="flex flex-col py-16 m-auto p-auto ">
