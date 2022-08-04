@@ -15,12 +15,12 @@ export function Connect() {
               
         {
           isConnected ? (
-            <MenuButton className="px-16 py-4 mr-2 bg-[#39B7FF] rounded-2xl text-white ">
+            <MenuButton className="sm:px-16 sm:py-4 px-8 py-2 mr-2 bg-[#39B7FF] rounded-2xl text-white pixel pixel-btn">
           
               {/* truncate address */}
               {
                 address !== undefined ? 
-                <span className="inline-block ml-2 uppercase">
+                <span className="inline-block ml-2 text-xs uppercase sm:text-md">
                 {address.substring(0, 8)} ...
                 {address.substring(address.length - 4, address.length)}
                   </span>
@@ -30,7 +30,7 @@ export function Connect() {
 
             </MenuButton>
           ) : (
-            <MenuButton className="px-16 py-4 mr-2 uppercase bg-[#39B7FF] rounded-2xl text-white">
+            <MenuButton className="px-16 py-4 mr-2 uppercase bg-[#39B7FF] rounded-2xl text-white pixel pixel-btn">
             Connect Wallet
           </MenuButton>)
             }

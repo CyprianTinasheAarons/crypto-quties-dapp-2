@@ -70,30 +70,30 @@ export function Mint() {
   
     useEffect(() => {
       calculateTotal();
-  }, [])
+  })
     
   
 
   return (
-    <div className="container px-8 py-16 mx-auto sm:px-32 ">
-      <h1 className="mb-4 text-3xl font-bold text-center uppercase">Mint NFT</h1>
-      <p className="text-center">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
-      <p className="text-center">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
-      <div className="flex items-center justify-center">
-      <img src="2022.gif" alt="" className="w-1/3 rounded-2xl"/>
+    <div className="px-8 py-16 mx-auto text-[#EC6F35] sm:px-32 bg font">
+      <h1 className="mb-4 text-3xl font-bold text-center uppercase font">Mint NFT</h1>
+      <p className="text-center font">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
+      <p className="text-center font">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
+      <div className="flex items-center justify-center m-4">
+      <img src="2022.gif" alt="" className="w-1/4 rounded-2xl"/>
         </div>
       <div className="flex justify-center p-2 m-2 ">
-    <div className="flex flex-row items-center align-middle ">    <button className="flex items-center px-8 py-2 mr-2 text-2xl text-black align-middle"  onClick={() => {
+    <div className="flex flex-row items-center align-middle ">    <button className="flex items-center justify-center w-10 h-10 mr-2 text-2xl text-white align-middle bg-[#EC6F35] border-2 border-white rounded-full"  onClick={() => {
       setMintAmount(mintAmount - 1)
-    }} disabled={mintAmount === 0}>-</button> <h1 className="mx-2 text-2xl text-center text-black">{mintAmount}</h1> <button className="flex items-center px-8 py-2 mr-2 text-2xl text-black align-middle"  onClick={() => {
+    }} disabled={mintAmount <= 1}><h1 className="text-center">-</h1></button> <h1 className="mx-2 text-2xl text-center text-white">{mintAmount}</h1> <button className="flex items-center justify-center w-10 h-10 ml-2 text-2xl text-white align-middle bg-[#EC6F35] border-2 border-white rounded-full"  onClick={() => {
       setMintAmount(mintAmount + 1)
-    }}>+</button></div>
+    }}><h1 className="text-center">+</h1></button></div>
       </div>
-      {minting && <h1 className="mx-2 text-lg text-center text-black">Minting...</h1>}
+      {minting && <h1 className="mx-2 text-lg text-center text-white">Minting...</h1>}
       <div className="flex justify-center p-2 m-2 ">
   
                      {
-                       isConnected ? (<><button className="px-16 py-4 mr-2 bg-[#39B7FF] rounded-2xl text-white" onClick={() => initMinter()} ><h1 className="uppercase ">Mint </h1> </button>  </>) :
+                       isConnected ? (<><button className="px-16 py-4 mr-2 bg-[#39B7FF] rounded-2xl text-white" onClick={() => initMinter()} ><h1 className="uppercase ">Mint NFT </h1> </button>  </>) :
                        <Connect/>
                      }
       </div>

@@ -13,7 +13,16 @@ html,
 body {
   font-family: "Pixel", sans-serif;
   font-weight: bold;
- 
+}
+
+.font{
+  font-family: "Pixel", sans-serif;
+  font-weight: bold;
+}
+
+.bg{
+  background: url("/background.jpg");
+  background-attachment: fixed;
 }
 
 
