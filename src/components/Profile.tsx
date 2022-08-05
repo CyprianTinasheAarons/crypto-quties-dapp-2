@@ -17,7 +17,7 @@ export function Profile() {
     })
 
     const getData = async () => {
-      console.log("getData")
+
       await mainContract.walletOfOwner(address)
           .then((result: any) => {
             console.log(result)
@@ -33,38 +33,46 @@ export function Profile() {
   });
 
     return (
-      <div className="px-8 py-16 mx-auto sm:px-32 bg font text-[#EC6F35] min-h-screen ">
-        <h1 className="mb-4 text-3xl font-bold text-center uppercase">My NFTs</h1>
+      <div className="px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
+        <h1 className="mb-4 text-3xl font-bold text-center uppercase font">My NFTs</h1>
+        {
+          nftData.length > 0 ? (
+            <div className="flex flex-col py-16 m-auto p-auto ">
 
-<div className="flex flex-col py-16 m-auto p-auto ">
+              <div
+                className="flex pb-10 overflow-x-scroll hide-scroll-bar"
+              >
+                <div
+                  className="flex flex-nowrap "
+                >
 
-      <div
-        className="flex pb-10 overflow-x-scroll hide-scroll-bar"
-      >
-        <div
-          className="flex flex-nowrap "
-                    >
-            
-                        {nftData.map((item, index) => {
-                            return (
-                                <div className="inline-block px-3 " key={index}>
-                                    <div
-                                        className="w-64 h-64 max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out border-4 border-black shadow-md rounded-2xl hover:shadow-xl"
-                                    >
-                                  <a>
-                                  <img src={`https://gateway.pinata.cloud/ipfs/QmdJmuH8oEJoBbyyjUdsafYQH8xoLLvAeUvgZ1Ece1Jh6d/${item}.jpg`} alt="" className="w-full h-full" />    
+                  {nftData.map((item, index) => {
+                    return (
+                      <div className="inline-block p-2 px-3 py-8 bg-[#B9D7ED] rounded-xl border-4 border-black " key={index}>
+                        <div
+                          className="w-64 h-64 max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out shadow-md rounded-2xl hover:shadow-xl"
+                        >
+                          <a>
+                            <img src={`https://gateway.pinata.cloud/ipfs/QmdJmuH8oEJoBbyyjUdsafYQH8xoLLvAeUvgZ1Ece1Jh6d/${item}.jpg`} alt="" className="w-full h-full" />
                           </a>
-                                </div>
-                                <div className="flex justify-between mx-2">
-                                    <h1 className="text-2xl text-black">#</h1>
-                                    <h1 className="text-2xl text-black">{parseInt(item)}</h1>
-                                  </div>
-                                </div>
-                            )
-                        })}               
-        </div>
-      </div>
-            </div>
+                        </div>
+                        <div className="flex justify-between mx-2">
+                          <h1 className="text-2xl italic text-black">#</h1>
+                          <h1 className="text-2xl text-black font">{parseInt(item)}</h1>
+                        </div>
+                      </div>
+                      
+                    )
+                  })}
+                </div>
+              </div>
+            </div>) : (
+              <div className="flex flex-col py-16 m-auto p-auto ">
+                 <h1 className="text-2xl text-center ">No NFTs Found</h1>
+                </div>
+            )
+        }
+
             </div>    
     )
 }

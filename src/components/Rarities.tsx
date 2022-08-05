@@ -6,7 +6,7 @@ export function Rarities() {
                 <div className="flex flex-wrap pt-24 -m-4">
                     <div className="p-4 lg:w-1/4 md:w-1/2">
                         <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
-                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-lg h-98" src="./types/Qute.jpeg" />
+                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Qute.jpeg" />
                             <div className="w-full">
 
                                 <div className="flex items-center justify-between align-middle">
@@ -24,7 +24,7 @@ export function Rarities() {
                     </div>
                     <div className="p-4 lg:w-1/4 md:w-1/2">
                         <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
-                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-lg h-98" src="./types/Epic.jpeg" />
+                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Epic.jpeg" />
                             <div className="w-full">
 
                                 <div className="flex items-center justify-between align-middle">
@@ -42,7 +42,7 @@ export function Rarities() {
                     </div>
                     <div className="p-4 lg:w-1/4 md:w-1/2">
                         <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
-                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-lg h-98" src="./types/Rare.jpeg" />
+                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Rare.jpeg" />
                             <div className="w-full">
 
                                 <div className="flex items-center justify-between align-middle">
@@ -60,7 +60,7 @@ export function Rarities() {
                     </div>
                     <div className="p-4 lg:w-1/4 md:w-1/2">
                         <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
-                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-lg h-98" src="./types/Legendary.jpeg" />
+                            <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Legendary.jpeg" />
                             <div className="w-full">
 
                                 <div className="flex items-center justify-between align-middle">

@@ -15,7 +15,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest1.png" alt="" />
                                     </a>
@@ -44,7 +44,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest2.png" alt="" />
                                     </a>
@@ -72,7 +72,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center ">
                                         <img className="w-3/5 rounded-t-lg" src="/quest3.png" alt="" />
                                     </a>
@@ -104,7 +104,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest4.png" alt="" />
                                     </a>
@@ -160,7 +160,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest6.png" alt="" />
                                     </a>
@@ -193,7 +193,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest7.png" alt="" />
                                     </a>
@@ -221,7 +221,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest8.png" alt="" />
                                     </a>
@@ -249,7 +249,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest9.png" alt="" />
                                     </a>
@@ -282,7 +282,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest10.png" alt="" />
                                     </a>
@@ -310,7 +310,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg" src="/quest11.png" alt="" />
                                     </a>
@@ -338,7 +338,7 @@ export function Quest() {
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                             </div>
                             <div className="mt-3 sm:pr-8 h-96">
-                                <div className="relative w-full max-w-sm p-2 bg-white border border-gray-200 rounded-lg shadow-md h-96 sm:w-96">
+                                <div className="relative w-full max-w-sm p-2 bg-white border-4 border-black shadow-md rounded-xl h-96 sm:w-96">
                                     <a href="#" className="flex justify-center">
                                         <img className="w-3/5 rounded-t-lg " src="/quest12.png" alt="" />
                                     </a>

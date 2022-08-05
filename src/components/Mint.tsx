@@ -1,5 +1,5 @@
 
-import { useAccount, useContract, useSigner} from 'wagmi'
+import { useAccount, useContract, useSigner ,useNetwork} from 'wagmi'
 import {  useToast } from '@chakra-ui/react';
 import { Connect } from './Connect';
 import { useState, useEffect } from 'react';
@@ -14,6 +14,7 @@ export function Mint() {
   const [mint, setMint] = useState(false)
   const [mintAmount, setMintAmount] = useState(1)
   const [totalsupply, setTotalSupply] = useState(0)
+  const { chain } = useNetwork()
 
     const toast = useToast()
     const contractMainAddr = "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40"
@@ -59,8 +60,8 @@ export function Mint() {
         
   }
 
-  const calculateTotal = async () => {
-     await mainContract.totalSupply().then((data: any) => {
+  const calculateTotal =  () => {
+      mainContract.totalSupply().then((data: any) => {
       console.log("data", data)
       setTotalSupply(999 - data.toNumber())
     }).catch((error: any) => {
@@ -95,10 +96,13 @@ export function Mint() {
         <div className="flex justify-center p-2 m-2 ">
 
           {
-            isConnected ? (<><button className="px-16 py-4 mr-2 bg-[#39B7FF] pixel-btn text-white" onClick={() => initMinter()} ><h1 className="uppercase ">Mint NFT </h1> </button>  </>) :
+            isConnected ? (<><button className="px-16 py-4 mr-2 bg-[#39B7FF] pixel-btn text-white" onClick={() => initMinter()} disabled={chain?.id !== 56} ><h1 className="uppercase">Mint NFT </h1> </button>  </>) :
               <Connect />
           }
         </div>
+       
+        {chain?.id === 56 ? <h1 className='py-2 text-center'>Connected to BSC</h1> : <h1 className='py-2 text-center text-red-500'>Please Connect to BSC</h1> }
+
 
         <a href="https://bscscan.com/address/0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40" target="_blank" className="text-center">
           <p className="text-center underline">View on BSCScan</p>
