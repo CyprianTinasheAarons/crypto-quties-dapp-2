@@ -83,7 +83,7 @@ export function Mint() {
     
         <p className="text-xs text-center font sm:text-lg ">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
         <p className="text-xs text-center font sm:text-lg">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
-        <div className="flex items-center justify-center m-4 animate__rubberBand">
+        <div className="flex items-center justify-center m-4 animate__animated animate__rubberBand">
           <img src="2022.gif" alt="" className="w-full sm:w-1/4 rounded-2xl" />
         </div>
         <div className="flex justify-center p-2 m-2 ">

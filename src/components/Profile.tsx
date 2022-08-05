@@ -49,7 +49,7 @@ export function Profile() {
 
                   {nftData.map((item, index) => {
                     return (
-                      <div className="inline-block p-2 px-3 py-8 bg-[#B9D7ED] rounded-xl border-4 border-black " key={index}>
+                      <div className="inline-block p-2 px-3 py-8 bg-[#B9D7ED] rounded-xl border-4 border-black  animate__animated animate__bounceInLeft" key={index}>
                         <div
                           className="w-64 h-64 max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out shadow-md rounded-2xl hover:shadow-xl"
                         >

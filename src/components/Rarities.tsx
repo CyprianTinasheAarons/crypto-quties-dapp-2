@@ -7,7 +7,7 @@ export function Rarities() {
                 <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">FOUR DIFFERENT RARITIES!</h1>
                 <div className="flex flex-wrap pt-8 -m-4 sm:pt-24">
                     <div className="p-4 lg:w-1/4 md:w-1/2">
-                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
+                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl animate__animated animate__shakeY">
                             <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Qute.jpeg" />
                             <div className="w-full">
 
@@ -25,7 +25,7 @@ export function Rarities() {
                         </div>
                     </div>
                     <div className="p-4 lg:w-1/4 md:w-1/2">
-                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
+                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl animate__animated animate__shakeY">
                             <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Epic.jpeg" />
                             <div className="w-full">
 
@@ -43,7 +43,7 @@ export function Rarities() {
                         </div>
                     </div>
                     <div className="p-4 lg:w-1/4 md:w-1/2">
-                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
+                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl animate__animated animate__shakeY">
                             <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Rare.jpeg" />
                             <div className="w-full">
 
@@ -61,7 +61,7 @@ export function Rarities() {
                         </div>
                     </div>
                     <div className="p-4 lg:w-1/4 md:w-1/2">
-                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl">
+                        <div className="flex flex-col items-center h-full p-4 text-center bg-[#B9D6EC] border-4 border-black rounded-xl animate__animated animate__shakeY">
                             <img alt="team" className="flex-shrink-0 object-cover object-center w-full mb-4 rounded-xl h-98" src="./types/Legendary.jpeg" />
                             <div className="w-full">
 

@@ -17,7 +17,7 @@ export function About() {
                                 <a href="/" className="inline-flex px-6 py-2 ml-4 text-lg text-gray-700 bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200 pixel-btn">Mint</a>
                             </div>
                         </div>
-                        <div className="w-full sm:w-1/2">
+                        <div className="w-full sm:w-1/2 animate__animated animate__rubberBand">
                             <img className="object-cover object-center rounded" alt="hero" src="./Collage_Random.png"/>
                         </div>
                     </div>
