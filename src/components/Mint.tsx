@@ -81,10 +81,10 @@ export function Mint() {
       <div>  
         <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">Mint NFT</h1>
     
-        <p className="text-center font">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
-        <p className="text-center font">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
+        <p className="text-xs text-center font sm:text-lg ">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
+        <p className="text-xs text-center font sm:text-lg">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
         <div className="flex items-center justify-center m-4 animate__rubberBand">
-          <img src="2022.gif" alt="" className="w-1/4 rounded-2xl" />
+          <img src="2022.gif" alt="" className="w-full sm:w-1/4 rounded-2xl" />
         </div>
         <div className="flex justify-center p-2 m-2 ">
           <div className="flex flex-row items-center align-middle ">    <button className="flex items-center justify-center w-10 h-10 mr-2 text-2xl text-white align-middle bg-[#EC6F35] border-2 border-white rounded-full " onClick={() => {
