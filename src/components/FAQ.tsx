@@ -15,7 +15,7 @@ export function FAQ() {
                 <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">Questions</h1>
 
                 <div className='block sm:flex'>
-                    <Accordion className='py-8 mx-4 sm:py-24 '>
+                    <Accordion className='py-0 mx-4 sm:py-24 '>
                         <AccordionItem className='my-8 bg-white border-2 border-black rounded-xl'>
                             <h2>
                                 <AccordionButton>
@@ -72,7 +72,7 @@ export function FAQ() {
                             </AccordionPanel>
                         </AccordionItem>
                     </Accordion>
-                    <Accordion className='py-8 mx-4 sm:py-24 '>
+                    <Accordion className='py-0 mx-4 sm:py-24 '>
                         <AccordionItem className='my-8 bg-white border-2 border-black rounded-xl'>
                             <h2>
                                 <AccordionButton>
@@ -130,7 +130,7 @@ export function FAQ() {
 
 
                     </Accordion>
-                    <Accordion className='py-8 mx-4 sm:py-24 '>
+                    <Accordion className='py-0 mx-4 sm:py-24 '>
                         <AccordionItem className='my-8 bg-white border-2 border-black rounded-xl'>
                             <h2>
                                 <AccordionButton>

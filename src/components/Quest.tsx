@@ -6,12 +6,12 @@ export function Quest() {
             <div>
                 <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">Quest</h1>
 
-                <div className="flex flex-wrap pt-24 -m-4 sm:justify-center">
+                <div className="flex flex-wrap pt-8 -m-4 sm:pt-24 sm:justify-center">
 
                     <ol className="items-center sm:flex">
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     1
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -40,7 +40,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     2
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -68,7 +68,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     3
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -100,7 +100,7 @@ export function Quest() {
                     <ol className="items-center sm:flex sm:pt-16">
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     4
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -128,7 +128,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     5
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -156,7 +156,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     6
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -189,7 +189,7 @@ export function Quest() {
                     <ol className="items-center pt-16 sm:flex">
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#38B6FE] rounded-full ring-8 ring-[#38B6FE] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#38B6FE] rounded-full ring-8 ring-[#38B6FE] shrink-0">
                                     7
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -217,7 +217,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#38B6FE] rounded-full ring-8 ring-[#38B6FE] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#38B6FE] rounded-full ring-8 ring-[#38B6FE] shrink-0">
                                     8
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -245,7 +245,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     9
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -278,7 +278,7 @@ export function Quest() {
                     <ol className="items-center pt-16 sm:flex">
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#38B6FE] rounded-full ring-8 ring-[#38B6FE] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#38B6FE] rounded-full ring-8 ring-[#38B6FE] shrink-0">
                                     10
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -306,7 +306,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     11
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
@@ -334,7 +334,7 @@ export function Quest() {
                         </li>
                         <li className="relative mb-6 sm:mb-0">
                             <div className="flex items-center">
-                                <div className="z-10 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
+                                <div className="z-5 flex items-center justify-center w-6 h-6 text-white bg-[#E949C0] rounded-full ring-8 ring-[#E949C0] shrink-0">
                                     12
                                 </div>
                                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>

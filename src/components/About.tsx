@@ -5,9 +5,9 @@ export function About() {
     return (
         <div className="px-8 py-16 mx-auto text-[#EC6F35] sm:px-32 bg font min-h-screen">
             <div>
-                <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounc">About NFT</h1>
+                <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">About NFT</h1>
                 <section >
-                    <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
+                    <div className="container flex flex-col items-center px-5 py-8 mx-auto sm:py-24 md:flex-row">
                         <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/3 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
                             <img className="w-full md:w-1/2 md:h-auto" src="./bannerimg.png" alt="NFT" />
                             <p className="mb-8 leading-relaxed">The Crypto Quties are 999 cute & unique collectible NFT characters, each pixel hand made with love!</p>
