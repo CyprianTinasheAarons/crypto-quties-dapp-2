@@ -1,6 +1,4 @@
 import { Connect } from "./Connect"
-
-
 export function Nav() {
 
 

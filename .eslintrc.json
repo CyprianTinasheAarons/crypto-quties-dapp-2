@@ -1,6 +1,0 @@
-{
-  // The rest of your ESLint config...
-  "ignorePatterns": [
-      "gists/**"
-  ]
-}
