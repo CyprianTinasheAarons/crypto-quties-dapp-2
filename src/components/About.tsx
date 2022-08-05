@@ -1,8 +1,10 @@
-export function  About() {
+import 'animate.css';
+
+export function About() {
     return (
         <div className="px-8 py-16 mx-auto text-[#EC6F35] sm:px-32 bg font min-h-screen">
             <div>
-                <h1 className="mb-4 text-3xl font-bold text-center uppercase font">About NFT</h1>
+                <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounc">About NFT</h1>
                 <section >
                     <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
                         <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/3 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">

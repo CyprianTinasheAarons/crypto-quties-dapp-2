@@ -6,13 +6,13 @@ import {
     AccordionIcon,
     Box
 } from '@chakra-ui/react'
-
+import 'animate.css';
 
 export function FAQ() {
     return (
         <div className="px-8 py-16 mx-auto text-[#EC6F35] sm:px-32 bg font min-h-screen">
             <div>
-                <h1 className="mb-4 text-3xl font-bold text-center uppercase font">Questions</h1>
+                <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">Questions</h1>
 
                 <div className='block sm:flex'>
                     <Accordion className='py-8 mx-4 sm:py-24 '>

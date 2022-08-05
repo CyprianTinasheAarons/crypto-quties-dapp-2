@@ -4,6 +4,7 @@ import {  useToast } from '@chakra-ui/react';
 import { Connect } from './Connect';
 import { useState, useEffect } from 'react';
 const mainAbi = require("../abis/main.json")
+import 'animate.css';
 
 export function Mint() {
 
@@ -78,11 +79,11 @@ export function Mint() {
   return (
     <div className="px-8 py-16 mx-auto text-[#EC6F35] sm:px-32 bg font min-h-screen">
       <div>  
-      <h1 className="mb-4 text-3xl font-bold text-center uppercase font">Mint NFT</h1>
+        <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">Mint NFT</h1>
     
         <p className="text-center font">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
         <p className="text-center font">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
-        <div className="flex items-center justify-center m-4">
+        <div className="flex items-center justify-center m-4 animate__rubberBand">
           <img src="2022.gif" alt="" className="w-1/4 rounded-2xl" />
         </div>
         <div className="flex justify-center p-2 m-2 ">

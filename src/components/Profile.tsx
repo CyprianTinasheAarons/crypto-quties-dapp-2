@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import {useAccount, useContract ,useSigner} from 'wagmi'
 const mainAbi = require("../abis/main.json")
+import 'animate.css';
 
 export function Profile() {
 
@@ -34,7 +35,7 @@ export function Profile() {
 
     return (
       <div className="px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
-        <h1 className="mb-4 text-3xl font-bold text-center uppercase font">My NFTs</h1>
+        <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">My NFTs</h1>
         {
           nftData.length > 0 ? (
             <div className="flex flex-col py-16 m-auto p-auto ">
@@ -56,7 +57,7 @@ export function Profile() {
                             <img src={`https://gateway.pinata.cloud/ipfs/QmdJmuH8oEJoBbyyjUdsafYQH8xoLLvAeUvgZ1Ece1Jh6d/${item}.jpg`} alt="" className="w-full h-full" />
                           </a>
                         </div>
-                        <div className="flex justify-between mx-2">
+                        <div className="flex justify-between pt-4 mx-2">
                           <h1 className="text-2xl italic text-black">#</h1>
                           <h1 className="text-2xl text-black font">{parseInt(item)}</h1>
                         </div>
