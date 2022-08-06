@@ -5,6 +5,9 @@ import { Connect } from './Connect';
 import { useState, useEffect } from 'react';
 const mainAbi = require("../abis/main.json")
 import 'animate.css';
+let Contract = require("web3-eth-contract");
+let abi = require("./abi.json");
+
 
 export function Mint() {
 
@@ -18,7 +21,13 @@ export function Mint() {
   const { chain } = useNetwork()
 
     const toast = useToast()
-    const contractMainAddr = "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40"
+  const contractMainAddr = "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40"
+  
+  // set provider for all later instances to use
+Contract.setProvider("https://bsc-dataseed1.binance.org");
+
+let contract = new Contract(abi, "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40");
+
 
 
     const mainContract = useContract({
@@ -61,10 +70,10 @@ export function Mint() {
         
   }
 
-  const calculateTotal =  () => {
-      mainContract.totalSupply().then((data: any) => {
+  const calculateTotal =  async () => {
+      await contract.methods.totalSupply().call().then((data: any) => {
       console.log("data", data)
-      setTotalSupply(999 - data.toNumber())
+      setTotalSupply(999 - data)
     }).catch((error: any) => {
       console.log("error", error)
     })

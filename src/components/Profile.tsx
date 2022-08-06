@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import {useAccount, useContract ,useSigner} from 'wagmi'
-const mainAbi = require("../abis/main.json")
+
 import 'animate.css';
 import axios from 'axios';
 let Contract = require("web3-eth-contract");
