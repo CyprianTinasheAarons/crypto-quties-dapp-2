@@ -82,7 +82,7 @@ export function Profile() {
                         </div>
                         <div className="flex justify-between pt-4 mx-2">
                           <h1 className="text-2xl italic text-black">#</h1>
-                          <h1 className="text-2xl text-black font">{parseInt(item)}</h1>
+                          <h1 className="text-2xl text-black font">{nftData[index]}</h1>
                         </div>
                       </div>
                       
