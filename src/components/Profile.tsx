@@ -31,8 +31,7 @@ export function Profile() {
   }
 
   // read get json data from nftdata
-  const readData = async () => {
-
+  const readData = ()=>{
   nftData.forEach((item: any) => {
    axios.get(`https://cq-cid-art.herokuapp.com/image/${item}.json`).then((res: any) => {
      console.log(res.data)
@@ -55,7 +54,7 @@ export function Profile() {
     getData();
     readData()
     console.log(nftData)
-  },[]);
+  },[readData()]);
 
     return (
       <div className="px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
