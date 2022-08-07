@@ -54,7 +54,7 @@ export function Profile() {
     getData();
     readData()
     console.log(nftData)
-  },[images]);
+  },[nftData ? nftData.length : 0]);
 
     return (
       <div className="px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
