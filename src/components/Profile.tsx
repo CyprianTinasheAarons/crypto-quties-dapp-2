@@ -23,7 +23,7 @@ export function Profile() {
 
   const getData = async () => {
 
-    await contract.methods.walletOfOwner("0x00be7fBafCec4E3b4528CE4Ab4D8c82EE2940C0a").call()
+    await contract.methods.walletOfOwner(address).call()
       .then((result: any) => {
         setNftData(result);
         for (let i = 0; i < result.length; i++) {
