@@ -10,54 +10,48 @@ let abi = require("./abi.json");
 Contract.setProvider("https://bsc-dataseed1.binance.org");
 
 let contract = new Contract(abi, "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40");
-
+let array: any = []
+    
 export function Profile() {
 
-    const { address } = useAccount()
+  const { address } = useAccount()
    
   const [nftData, setNftData] = useState([]);
-  const [images,setImagesData] = useState([]);
+  const [images, setImagesData] = useState(Array<string>);
 
 
 
   const getData = async () => {
 
-    await contract.methods.walletOfOwner(address).call()
+    await contract.methods.walletOfOwner("0x00be7fBafCec4E3b4528CE4Ab4D8c82EE2940C0a").call()
       .then((result: any) => {
-
         setNftData(result);
-  
+        for (let i = 0; i < result.length; i++) {
+         axios.get(`https://cq-cid-art.herokuapp.com/image/${nftData[i]}.json`)
+        .then(res => {
+          return array.push(res.data)
+        }).catch(err => {
+          console.log(err)
+        }).finally(() => {
+          setImagesData(array)
+        })
+    }
+      }).catch((err: any) => {
+        console.log(err)
       })
   }
 
-  // read get json data from nftdata
-  const readData = ()=>{
-  nftData.forEach((item: any) => {
-   axios.get(`https://cq-cid-art.herokuapp.com/image/${item}.json`).then((res: any) => {
-     console.log(res.data)
-      let array:any = []
-     array.push(res.data)
-     console.log(array)
-      setImagesData(array)
-     
-      }).catch(
-        (error: any) => {
-          console.log(error)
-        }
-    )
-    }
-    )
-  }
+
+
 
  
   useEffect(() => {
-    getData();
-    readData()
-    console.log(nftData)
-  },[nftData ? nftData.length : 0]);
+  getData();
+  }, [])
+
 
     return (
-      <div className="px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
+      <div className="sm:px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
         <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">My NFTs</h1>
         {
           images.length > 0 ? (
@@ -69,10 +63,11 @@ export function Profile() {
                 <div
                   className="flex flex-nowrap "
                 >
+                  
 
                   {images.map((item, index) => {
                     return (
-                      <div className="inline-block p-2 px-3 py-8 bg-[#B9D7ED] rounded-xl border-4 border-black  animate__animated animate__bounceInLeft" key={index}>
+                      <div className="inline-block p-2 sm:px-3 py-8 bg-[#B9D7ED] rounded-xl border-4 border-black  animate__animated animate__bounceInLeft" key={index}>
                         <div
                           className="w-64 h-64 max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out shadow-md rounded-2xl hover:shadow-xl"
                         >
@@ -81,7 +76,7 @@ export function Profile() {
                           </a>
                         </div>
                         <div className="flex justify-between pt-4 mx-2">
-                          <h1 className="text-2xl italic text-black">#</h1>
+                          <h1 className="text-2xl italic text-black"># </h1>
                           <h1 className="text-2xl text-black font">{nftData[index]}</h1>
                         </div>
                       </div>
