@@ -26,8 +26,12 @@ export function Profile() {
     await contract.methods.walletOfOwner(address).call()
       .then((result: any) => {
         setNftData(result);
+
         for (let i = 0; i < result.length; i++) {
-         axios.get(`https://cq-cid-art.herokuapp.com/image/${nftData[i]}.json`)
+          console.log(`https://cq-cid-art.herokuapp.com/image/${nftData[i]}.json`)
+
+          
+        const tester =  async() => await axios.get(`https://cq-cid-art.herokuapp.com/image/${nftData[i]}.json`)
         .then(res => {
           return array.push(res.data)
         }).catch(err => {
@@ -35,19 +39,18 @@ export function Profile() {
         }).finally(() => {
           setImagesData(array)
         })
+        
+        tester()
+        tester()
     }
       }).catch((err: any) => {
         console.log(err)
       })
   }
 
-
-
-
- 
   useEffect(() => {
   getData();
-  }, [])
+  },[])
 
 
     return (
