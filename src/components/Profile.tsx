@@ -28,20 +28,19 @@ export function Profile() {
         setNftData(result);
 
         for (let i = 0; i < result.length; i++) {
-          console.log(`https://cq-cid-art.herokuapp.com/image/${nftData[i]}.json`)
 
-          
-        const tester =  async() => await axios.get(`https://cq-cid-art.herokuapp.com/image/${nftData[i]}.json`)
-        .then(res => {
-          return array.push(res.data)
-        }).catch(err => {
-          console.log(err)
-        }).finally(() => {
-          setImagesData(array)
-        })
-        
-        tester()
-        tester()
+          axios.get(`https://cq-cid-art.herokuapp.com/image/${result[i]}.json`)
+            .then(res => {
+              array.push(res.data)
+              setImagesData(array)
+              console.log("Images loaded successfully", images)
+            }).catch(err => {
+              console.log(err)
+            }).finally(() => {
+              setImagesData(array)
+              console.log("Images loaded successfully", images)
+            })
+
     }
       }).catch((err: any) => {
         console.log(err)
@@ -50,7 +49,7 @@ export function Profile() {
 
   useEffect(() => {
   getData();
-  },[])
+  },[setImagesData])
 
 
     return (
