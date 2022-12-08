@@ -1,6 +1,6 @@
 
-import { useAccount, useContract, useSigner ,useNetwork} from 'wagmi'
-import {  useToast } from '@chakra-ui/react';
+import { useAccount, useContract, useSigner, useNetwork } from 'wagmi'
+import { useToast } from '@chakra-ui/react';
 import { Connect } from './Connect';
 import { useState, useEffect } from 'react';
 const mainAbi = require("../abis/main.json")
@@ -11,86 +11,86 @@ let abi = require("./abi.json");
 
 export function Mint() {
 
-    const [selected, setSelected] = useState(null);
-    const { data: signer } = useSigner()
-    const {isConnected } = useAccount()
-    const [minting, setMinting] = useState(false)
+  const [selected, setSelected] = useState(null);
+  const { data: signer } = useSigner()
+  const { isConnected } = useAccount()
+  const [minting, setMinting] = useState(false)
   const [mint, setMint] = useState(false)
   const [mintAmount, setMintAmount] = useState(1)
   const [totalsupply, setTotalSupply] = useState(0)
   const { chain } = useNetwork()
 
-    const toast = useToast()
+  const toast = useToast()
   const contractMainAddr = "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40"
-  
+
   // set provider for all later instances to use
-Contract.setProvider("https://bsc-dataseed1.binance.org");
+  Contract.setProvider("https://bsc-dataseed1.binance.org");
 
-let contract = new Contract(abi, "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40");
+  let contract = new Contract(abi, "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40");
 
 
 
-    const mainContract = useContract({
-        addressOrName: contractMainAddr,
-        contractInterface: mainAbi,
-        signerOrProvider: signer
-    })
+  const mainContract = useContract({
+    addressOrName: contractMainAddr,
+    contractInterface: mainAbi,
+    signerOrProvider: signer
+  })
 
 
   const initMinter = async () => {
 
-    let totalWei = String(600000000000000000  * mintAmount);
-      
+    let totalWei = String(300000000000000000 * mintAmount);
+
     let minter = await mainContract.mint(mintAmount, { value: totalWei, gasLimit: 1000000 })
     setMinting(true)
 
-          minter.wait().then((data: any) => {
-            console.log("data", data)
-            toast({
-              title: "Success",
-              description: "NFT Minted",
-              status: "success",
-              duration: 9000,
-              isClosable: true
-            })
-            setMinting(false)
- 
-            setSelected(null)
-            setMint(true)
-          }).catch((error:any) => {
-            toast({
-              title: "Error",
-              description: error.message,
-              status: "error",
-              duration: 9000,
-              isClosable: true
-            })
-            setMinting(false)
-          })
-        
+    minter.wait().then((data: any) => {
+      console.log("data", data)
+      toast({
+        title: "Success",
+        description: "NFT Minted",
+        status: "success",
+        duration: 9000,
+        isClosable: true
+      })
+      setMinting(false)
+
+      setSelected(null)
+      setMint(true)
+    }).catch((error: any) => {
+      toast({
+        title: "Error",
+        description: error.message,
+        status: "error",
+        duration: 9000,
+        isClosable: true
+      })
+      setMinting(false)
+    })
+
   }
 
-  const calculateTotal =  async () => {
-      await contract.methods.totalSupply().call().then((data: any) => {
+  const calculateTotal = async () => {
+    await contract.methods.totalSupply().call().then((data: any) => {
       console.log("data", data)
       setTotalSupply(999 - data)
     }).catch((error: any) => {
       console.log("error", error)
     })
   }
-  
-    useEffect(() => {
-      calculateTotal();
+
+  useEffect(() => {
+    calculateTotal();
   })
-    
-  
+
+
 
   return (
     <div className="px-8 py-16 mx-auto text-[#EC6F35] sm:px-32 bg font min-h-screen">
-      <div>  
+      <div>
         <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">Mint NFT</h1>
-    
-        <p className="text-xs text-center font sm:text-lg ">Mint a Crypto Qutie! O.6 BNB Price to Mint!</p>
+
+        <p className="text-xs text-center font sm:text-lg ">Mint a Crypto Qutie! O.3 BNB Price to Mint!</p>
         <p className="text-xs text-center font sm:text-lg">{totalsupply} Exclusive Crypto Quties Left to Mint!</p>
         <div className="flex items-center justify-center m-4 animate__animated animate__rubberBand">
           <img src="2022.gif" alt="" className="w-full sm:w-1/4 rounded-2xl" />
@@ -110,13 +110,13 @@ let contract = new Contract(abi, "0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40");
               <Connect />
           }
         </div>
-       
-        {chain?.id === 56 ? <h1 className='py-2 text-center'>Connected to BSC</h1> : <h1 className='py-2 text-center text-red-500'>Please Connect to BSC</h1> }
+
+        {chain?.id === 56 ? <h1 className='py-2 text-center'>Connected to BSC</h1> : <h1 className='py-2 text-center text-red-500'>Please Connect to BSC</h1>}
 
 
         <a href="https://bscscan.com/address/0xCF0Bf342AC1DA3C3307B85B6CB5B78D8Da384E40" target="_blank" className="text-center">
           <p className="text-center underline">View on BSCScan</p>
         </a></div>
-          </div>
-    )
+    </div>
+  )
 }
