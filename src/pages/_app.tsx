@@ -3,7 +3,7 @@ import "../styles/global.css"
 import 'tailwindcss/tailwind.css'
 import type { AppProps } from 'next/app'
 import NextHead from 'next/head'
-
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react'
 
@@ -77,9 +77,11 @@ function App({ Component, pageProps }: AppProps) {
                 />
 
       </NextHead>
+      <ThirdwebProvider activeChain="binance">
       <ChakraProvider>
         <Component {...pageProps} />
       </ChakraProvider>
+      </ThirdwebProvider>
     </WagmiConfig>
   )
 }

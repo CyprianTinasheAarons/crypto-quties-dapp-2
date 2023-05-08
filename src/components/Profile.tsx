@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import {useAccount, useContract ,useSigner} from 'wagmi'
-
+import {useAccount} from 'wagmi'
+import { MediaRenderer, ThirdwebNftMedia } from "@thirdweb-dev/react";
 import 'animate.css';
 import axios from 'axios';
 let Contract = require("web3-eth-contract");
@@ -18,29 +18,29 @@ export function Profile() {
    
   const [nftData, setNftData] = useState([]);
   const [images, setImagesData] = useState(Array<string>);
-
-
-
+ 
   const getData = async () => {
 
     await contract.methods.walletOfOwner(address).call()
       .then((result: any) => {
         setNftData(result);
 
-        for (let i = 0; i < result.length; i++) {
+        for (const element of result) {
 
-          axios.get(`https://cq-cid-art.herokuapp.com/image/${result[i]}.json`)
-            .then(res => {
-              array.push(res.data)
+          let baseurl = " https://nftstorage.link/ipfs/bafybeiakpgs4su4netevfbdrphptissvor47nbwkwldshxr6lkoejt23hm/"
+          let url = baseurl + element + ".json"
+          //resolve json url
+          axios.get(url)
+            .then((res: any) => {
+              let data = res.data.image
+              console.log(data)
+              array.push(data)
               setImagesData(array)
-              console.log("Images loaded successfully", images)
-            }).catch(err => {
-              console.log(err)
-            }).finally(() => {
-              setImagesData(array)
-              console.log("Images loaded successfully", images)
             })
-
+            .catch((err: any) => {
+              console.log(err)
+            })
+          
     }
       }).catch((err: any) => {
         console.log(err)
@@ -49,12 +49,17 @@ export function Profile() {
 
   useEffect(() => {
   getData();
-  },[setImagesData])
-
+  }, [setImagesData])
+  
+  useEffect(() => {
+    if (!address) 
+      location.href = '/'
+  }, [address])
 
     return (
       <div className="sm:px-8 py-16 mx-auto sm:px-32 bg  text-[#EC6F35] min-h-screen ">
         <h1 className="mb-4 text-3xl font-bold text-center uppercase font animate__animated animate__bounce">My NFTs</h1>
+
         {
           images.length > 0 ? (
             <div className="flex flex-col py-16 m-auto p-auto ">
@@ -65,7 +70,7 @@ export function Profile() {
                 <div
                   className="flex flex-nowrap "
                 >
-                  
+
 
                   {images.map((item, index) => {
                     return (
@@ -75,6 +80,9 @@ export function Profile() {
                         >
                           <a>
                             <img src={`${item}`} alt="" className="w-full h-full" />
+
+                            <MediaRenderer src={item} />
+
                           </a>
                         </div>
                         <div className="flex justify-between pt-4 mx-2">

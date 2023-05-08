@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
+    "@thirdweb-dev/react": "^3.11.9",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "daisyui": "^2.20.0",
